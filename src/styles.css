@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  --primary-white: #fff;
+  --secundary-white: #F5F5F5;
+  --primary-black: #333333;
+  --secundary-black: #000;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #333;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+.navigationApp {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 0px 8px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-white);
+  background-color: var(--primary-black);
+  
+  position: fixed;
+  z-index: 2;
+}
+.searchApp {
+  position: fixed;
+  z-index: 3;
+  top: 15px;
+  border: none;
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.sectionApp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1px;
+  width: 100%;
+  justify-items: center;
+}
+.productApp {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 25vh;
+  background-color: #D9D9D9;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.productApp .imageProduct{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 1;
+}
+.productApp .etiqueta {
+  height: 14px;
+  display: flex;
+  padding: 0px 4px;
+  margin-top: 8px;
+  background-color: #FFC107;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 1;
+  align-items: center;
+  gap: 8px;
+}
+.productApp .etiqueta p, .productApp .etiqueta span {
+  margin: 0; 
+  z-index: 1;
+  color: var(--secundary-black);
+}
+
+.productApp button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: row;
+  bottom: 0;
+  width: 100%;
+  background: #25D366;
+  color: var(--primary-white);
+  border: none;
+  opacity: 1;
+  font-weight: bold;
+  font-size: 14px;
+}
+.iconWhatsapp {
+  width: 18px;
+  height: 18px;
+  background-image: url('./public/whatsapp.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
