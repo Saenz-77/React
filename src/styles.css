@@ -114,6 +114,11 @@ code {
   color: var(--secundary-black);
 }
 
+.productApp a {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .productApp button {
   position: absolute;
   display: flex;
