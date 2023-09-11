@@ -53,7 +53,7 @@ code {
   display: flex;
   width: 100%;
   height: 50px;
-  padding: 0px 8px;
+  padding: 0px 16px;
   align-items: center;
   justify-content: space-between;
   color: var(--primary-white);
@@ -135,6 +135,11 @@ code {
   font-weight: bold;
   font-size: 14px;
 }
+.productApp button:active {
+  transform: translateY(2px);
+  filter: contrast(80%);
+}
+
 .iconWhatsapp {
   width: 18px;
   height: 18px;

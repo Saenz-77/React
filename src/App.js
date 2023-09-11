@@ -21,18 +21,18 @@ import newbalance from "./public/newbalance (1).jpg"
 
 const punto = ".";
 const defaultProducts = [
-  { marca: 'Nike', precio: `100${punto}000`, imagen: nike },
-  { marca: 'Puma', precio: `70${punto}000`, imagen: puma },
-  { marca: 'Reebok', precio: `80${punto}000`, imagen: reebok },
-  { marca: 'Adidas', precio: `110${punto}000`, imagen: adidas },
-  { marca: 'Skechers', precio: `90${punto}000`, imagen: skechers },
-  { marca: 'Jordan', precio: `130${punto}000`, imagen: jordan },
-  { marca: 'Caterpillar', precio: `120${punto}000`, imagen: caterpillar },
-  { marca: 'Converse', precio: `60${punto}000`, imagen: converse },
-  { marca: 'Gucci', precio: `200${punto}000`, imagen: gucci },
-  { marca: 'Under armor', precio: `100${punto}000`, imagen: underarmor },
-  { marca: 'Alberto F.', precio: `200${punto}000`, imagen: albertofermani },
-  { marca: 'New balance', precio: `90${punto}000`, imagen: newbalance },
+  { marca: 'Nike', precio: `100${punto}000`, imagen: nike, id: 1000 },
+  { marca: 'Puma', precio: `70${punto}000`, imagen: puma, id: 1001 },
+  { marca: 'Reebok', precio: `80${punto}000`, imagen: reebok, id: 1002 },
+  { marca: 'Adidas', precio: `110${punto}000`, imagen: adidas, id: 1003 },
+  { marca: 'Skechers', precio: `90${punto}000`, imagen: skechers, id: 1004 },
+  { marca: 'Jordan', precio: `130${punto}000`, imagen: jordan, id: 1005 },
+  { marca: 'Caterpillar', precio: `120${punto}000`, imagen: caterpillar, id: 1006 },
+  { marca: 'Converse', precio: `60${punto}000`, imagen: converse, id: 1007 },
+  { marca: 'Gucci', precio: `200${punto}000`, imagen: gucci, id: 1008 },
+  { marca: 'Under armor', precio: `100${punto}000`, imagen: underarmor, id: 1009 },
+  { marca: 'Alberto F.', precio: `200${punto}000`, imagen: albertofermani, id: 1010 },
+  { marca: 'New balance', precio: `90${punto}000`, imagen: newbalance, id: 1011 },
 ]
 
 function App() {
@@ -64,6 +64,7 @@ function App() {
             marca={product.marca}
             precio={product.precio}
             imagen={product.imagen}
+            id={product.id}
           />
         ) )}
       </SectionApp>

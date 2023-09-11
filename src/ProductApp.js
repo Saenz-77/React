@@ -12,7 +12,10 @@ function ProductApp(props) {
       </div>
 
       <img src={props.imagen} alt='producto' className='imageProduct'/>
-      <AddCart />
+      <AddCart 
+        key={props.imagen}
+        id={props.id}
+      />
     </div>
   )
 }
