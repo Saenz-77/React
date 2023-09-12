@@ -139,6 +139,29 @@ code {
   transform: translateY(2px);
   filter: contrast(80%);
 }
+.productApp button:hover {
+  cursor: pointer;
+}
+
+.exitProduct {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.productAbout {
+  display: flex;
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  top: 25vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  z-index: 2;
+}
 
 .iconWhatsapp {
   width: 18px;

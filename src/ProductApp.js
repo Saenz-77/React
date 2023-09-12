@@ -2,7 +2,7 @@ import React from 'react';
 
 import { AddCart } from './AddCart';
 
-function ProductApp(props) {
+function ProductApp(props) {  
   return (
     <div className='productApp'>
       
@@ -11,7 +11,7 @@ function ProductApp(props) {
         <p>${props.precio}</p>
       </div>
 
-      <img src={props.imagen} alt='producto' className='imageProduct'/>
+      <img src={props.imagen} alt='producto' className='imageProduct' onClick={props.handleClick}/>
       <AddCart 
         key={props.imagen}
         id={props.id}

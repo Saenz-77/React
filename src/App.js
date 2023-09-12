@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { HeaderApp } from "./HeaderApp";
 import { NavApp } from "./NavegationApp";
 import { SectionApp } from "./SectionApp";
 import { ProductApp } from "./ProductApp";
 import { SearchApp } from "./SearchApp";
+import { ProductAbout } from './ProductAbout';
 
 import nike from "./public/nike (1).jpg"
 import puma from "./public/puma (1).jpg"
@@ -37,7 +38,6 @@ const defaultProducts = [
 
 function App() {
   const [searchValue, setSearchValue] = React.useState('');
-  console.log("este es:  " + searchValue);
 
   const searchedProduct = defaultProducts.filter(
     (product) => {
@@ -47,8 +47,34 @@ function App() {
     }
   );
 
+  // --------------- Control para mostrar el producto ---------------
+  const [showProduct, setShowProduct] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if(event.target.classList.contains('exitProduct') ) {
+        setShowProduct(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setShowProduct(true);
+  };
+  // ----------------------------------------------------------------
+
+
   return (
     <React.Fragment>
+      {
+        showProduct && ( <ProductAbout ref={ref}/> )
+      }
 
       <SearchApp
         searchValue={searchValue}
@@ -65,6 +91,7 @@ function App() {
             precio={product.precio}
             imagen={product.imagen}
             id={product.id}
+            handleClick={handleClick}
           />
         ) )}
       </SectionApp>
