@@ -1,10 +1,11 @@
 import React from "react";
 
-function ProductAbout() {
+function ProductAbout(props) {
+  
   return(
     <div className="exitProduct">
       <div className="productAbout">
-        <p>Hello mundo - Hola World</p>
+        <img src={props.imagen} alt='producto' className='imageProductAbout'/>
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 import { HeaderApp } from "./HeaderApp";
 import { NavApp } from "./NavegationApp";
@@ -49,7 +49,6 @@ function App() {
 
   // --------------- Control para mostrar el producto ---------------
   const [showProduct, setShowProduct] = useState(false);
-  const ref = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -66,24 +65,26 @@ function App() {
 
   const handleClick = () => {
     setShowProduct(true);
+
   };
   // ----------------------------------------------------------------
 
 
   return (
     <React.Fragment>
-      {
-        showProduct && ( <ProductAbout ref={ref}/> )
-      }
 
       <SearchApp
         searchValue={searchValue}
         setSearchValue={setSearchValue}
-      />
+        />
       <NavApp/>
       <HeaderApp/>
 
       <SectionApp>
+        {
+          showProduct && (<ProductAbout />
+          )
+        }
         {searchedProduct.map( product => (
           <ProductApp
             key={product.marca}
@@ -101,3 +102,4 @@ function App() {
 }
 
 export default App;
+export {defaultProducts};
