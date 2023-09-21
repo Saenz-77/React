@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { HeaderApp } from "./HeaderApp";
 import { NavApp } from "./NavegationApp";
 import { SectionApp } from "./SectionApp";
 import { ProductApp } from "./ProductApp";
 import { SearchApp } from "./SearchApp";
-import { ProductAbout } from './ProductAbout';
 
 import nike from "./public/nike (1).jpg"
 import puma from "./public/puma (1).jpg"
@@ -47,29 +46,6 @@ function App() {
     }
   );
 
-  // --------------- Control para mostrar el producto ---------------
-  const [showProduct, setShowProduct] = useState(false);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if(event.target.classList.contains('exitProduct') ) {
-        setShowProduct(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  const handleClick = () => {
-    setShowProduct(true);
-
-  };
-  // ----------------------------------------------------------------
-
-
   return (
     <React.Fragment>
 
@@ -81,10 +57,6 @@ function App() {
       <HeaderApp/>
 
       <SectionApp>
-        {
-          showProduct && (<ProductAbout />
-          )
-        }
         {searchedProduct.map( product => (
           <ProductApp
             key={product.marca}
@@ -92,7 +64,7 @@ function App() {
             precio={product.precio}
             imagen={product.imagen}
             id={product.id}
-            handleClick={handleClick}
+            /* handleClick={handleClick} */
           />
         ) )}
       </SectionApp>
@@ -102,4 +74,3 @@ function App() {
 }
 
 export default App;
-export {defaultProducts};
