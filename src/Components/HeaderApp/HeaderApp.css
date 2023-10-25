@@ -55,8 +55,10 @@ h1 {
 
 @media (min-width: 501px) {
   .headerApp {
-    margin-top: 11vh;
     height: 60vh;
+  }
+  .divNav {
+    height: 11vh;
   }
 }
 @media (min-width: 1000px) {
