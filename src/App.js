@@ -1,23 +1,23 @@
 import React from "react";
 
-import { HeaderApp } from "./HeaderApp";
-import { NavApp } from "./NavegationApp";
-import { SectionApp } from "./SectionApp";
-import { ProductApp } from "./ProductApp";
-import { SearchApp } from "./SearchApp";
+import { HeaderApp } from "./Components/HeaderApp";
+import { NavApp } from "./Components/NavegationApp";
+import { SectionApp } from "./Components/SectionApp";
+import { ProductApp } from "./Components/ProductApp";
+import { SearchApp } from "./Components/SearchApp";
 
-import nike from "./public/nike (1).jpg"
-import puma from "./public/puma (1).jpg"
-import reebok from "./public/reebok (1).jpg"
-import adidas from "./public/adidas (1).jpg"
-import skechers from "./public/skechers (1).jpg"
-import jordan from "./public/jordan (1).jpg"
-import caterpillar from "./public/caterpillar (1).jpg"
-import converse from "./public/converse (1).jpg"
-import gucci from "./public/gucci (1).jpg"
-import underarmor from "./public/underarmor (1).jpg"
-import albertofermani from "./public/albertofermani (1).jpg"
-import newbalance from "./public/newbalance (1).jpg"
+import nike from "./assets/nike.jpg"
+import puma from "./assets/puma.jpg"
+import reebok from "./assets/reebok.jpg"
+import adidas from "./assets/adidas.jpg"
+import skechers from "./assets/skechers.jpg"
+import jordan from "./assets/jordan.jpg"
+import caterpillar from "./assets/caterpillar.jpg"
+import converse from "./assets/converse.jpg"
+import gucci from "./assets/gucci.jpg"
+import underarmor from "./assets/underarmor.jpg"
+import albertofermani from "./assets/albertofermani.jpg"
+import newbalance from "./assets/newbalance.jpg"
 
 const punto = ".";
 const defaultProducts = [
@@ -46,16 +46,29 @@ function App() {
     }
   );
 
+
+  const [visible, setVisible] = React.useState(true);
+  const handleSubmit = ( valueSearch ) => {
+    if (valueSearch === '') {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  }
+
   return (
     <React.Fragment>
 
+      <div className="divNav">.</div>
       <SearchApp
         searchValue={searchValue}
         setSearchValue={setSearchValue}
-        />
+        handleSubmit={handleSubmit}
+      />
       <NavApp/>
-      <HeaderApp/>
 
+      <HeaderApp visible={visible} />
+      
       <SectionApp>
         {searchedProduct.map( product => (
           <ProductApp
@@ -66,7 +79,7 @@ function App() {
             id={product.id}
             /* handleClick={handleClick} */
           />
-        ) )}
+        ))}
       </SectionApp>
 
     </React.Fragment>

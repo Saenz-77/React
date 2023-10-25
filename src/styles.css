@@ -49,6 +49,10 @@ code {
   font-size: 1.2em;
 }
 
+.divNav {
+  height: 50px;
+  width: 100%;
+}
 .navigationApp {
   display: flex;
   width: 100%;
@@ -97,7 +101,7 @@ code {
   position: absolute;
   opacity: 1;
 }
-.productApp .etiqueta {
+.etiqueta {
   height: 14px;
   display: flex;
   padding: 0px 4px;
@@ -110,7 +114,7 @@ code {
   align-items: center;
   gap: 8px;
 }
-.productApp .etiqueta p, .productApp .etiqueta span {
+.etiqueta p, .etiqueta span {
   margin: 0; 
   z-index: 1;
   color: var(--secundary-black);
@@ -164,15 +168,42 @@ code {
   top: 25vh;
   align-items: center;
   justify-content: center;
-  background-color: #25D366;
   z-index: 2;
   filter: blur(0px);
 }
+.etiquetaAbout {
+  height: 22px;
+  display: flex;
+  position: absolute;
+  padding: 0px 4px;
+  top: 8px;
+  right: 0px;
+  background-color: #FFC107;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 8px 0px 0px 8px;
+  z-index: 1;
+  align-items: center;
+  gap: 8px;
+}
+.etiquetaAbout p, .etiquetaAbout span {
+  margin: 0; 
+  z-index: 1;
+  color: var(--secundary-black);
+}
+
 .imageProductAbout {
   width: 100%;
   height: 100%;
-  object-fit: cover;}
+  object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
+}
   
+.productAbout a button {
+  height: 50px;
+  top: 0px;
+  border-radius: 0px 0px 8px 8px;
+}
 .iconWhatsapp {
   width: 18px;
   height: 18px;
@@ -187,6 +218,9 @@ code {
     width: 70%;
     top: 4%;
     padding: 0.4em;
+    max-height: 35px;
+  }
+  .divNav {
     max-height: 35px;
   }
   .navigationApp {
