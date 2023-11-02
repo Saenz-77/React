@@ -33,7 +33,7 @@ function HeaderApp({ visible }) {
   };
 
   return (
-    <div className='headerApp' style={{ display: visible ? 'block' : 'none' }}>
+    <div className='headerApp' style={{ display: visible ? 'flex' : 'none' }}>
       <Slider {...settings}>
         
           <img className='slider_imgs' src= {slider_img_1} alt='Imagen 1'/>

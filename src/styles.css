@@ -205,8 +205,8 @@ code {
   border-radius: 0px 0px 8px 8px;
 }
 .iconWhatsapp {
-  width: 18px;
-  height: 18px;
+  width: 1.1em;
+  height: 1.1em;
   background-image: url('./public/whatsapp.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -223,8 +223,52 @@ code {
   .navigationApp {
     height: 11%;
   }
-  
   .sectionApp {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navigationApp {
+    padding: 0em 2em;
+  }
+  .navigationApp svg {
+    width: 4em;
+    height: 4em;
+  }
+  .exitProduct {
+    backdrop-filter: blur(1.2px);
+  }
+  .sectionApp {
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* repeat(auto-fit, minmax(300px, 1fr)); */
+  } 
+  .productApp a {
+    display: none;
+  }
+  .etiquetaAbout {
+    height: 5vh;
+    top: 8vh;
+    font-size: 1.2em;
+  }
+  .productAbout {
+    width: 50%;
+    height: 60%;
+    top: 15vh;
+  }
+  .productAbout .iconWhatsapp {
+    width: 1.5em;
+    height: 100%;
+  }
+  .productAbout a {
+    display: block;
+  }
+  .productAbout a button {
+    font-size: 3vh;
+  }
+}
+
+@media (min-width: 1441px) {
+  .sectionApp {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
