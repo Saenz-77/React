@@ -38,11 +38,11 @@ function ProductApp(props) {
 
       <img src={props.imagen} alt='producto' className='imageProduct' onClick={() => handleClick(props.imagen)} />
       <AddCart
-        key={props.imagen}
+        key={props.id}
         id={props.id}
       />
 
-      { showProduct && selectedImage && <ProductAbout imagen={selectedImage} marca={props.marca} precio={props.precio}/>}
+      { showProduct && selectedImage && <ProductAbout imagen={selectedImage} marca={props.marca} precio={props.precio} id={props.id}/>}
     </div>
   );
 }

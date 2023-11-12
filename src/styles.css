@@ -125,7 +125,7 @@ code {
   bottom: 0;
   width: 100%;
 }
-.productApp button {
+.productApp .buttonPedir {
   position: absolute;
   display: flex;
   align-items: center;
@@ -141,11 +141,11 @@ code {
   font-weight: bold;
   font-size: 14px;
 }
-.productApp button:active {
+.productApp .buttonPedir:active {
   transform: translateY(2px);
   filter: contrast(80%);
 }
-.productApp button:hover {
+.productApp .buttonPedir:hover {
   cursor: pointer;
 }
 
@@ -198,7 +198,7 @@ code {
   object-fit: cover;
   border-radius: 8px 8px 0px 0px;
 }
-  
+
 .productAbout a button {
   height: 50px;
   top: 0px;
