@@ -7,18 +7,18 @@ import { AddCart } from "./AddCart";
 import second from "../assets/second.jpg"
 
 const imageList = {
-  '../assets/adidas.jpg': second,
-  '../assets/albertofermani.jpg': second,
-  '../assets/caterpillar.jpg': second,
-  '../assets/converse.jpg': second,
-  '../assets/gucci.jpg': second,
-  '../assets/jordan.jpg': second,
-  '../assets/newbalance.jpg': second,
-  '../assets/nike.jpg': second,
-  '../assets/puma.jpg': second,
-  '../assets/reebok.jpg': second,
-  '../assets/skechers.jpg': second,
-  '../assets/underarmor.jpg': second,
+  '/static/media/adidas.8fc6b257.jpg': second,
+  '/static/media/albertofermani.325dd87a.jpg': second,
+  '/static/media/caterpillar.2d608a99.jpg': second,
+  '/static/media/converse.340b6771.jpg': second,
+  '/static/media/gucci.c186502c.jpg': second,
+  '/static/media/jordan.c2197811.jpg': second,
+  '/static/media/newbalance.3fbd2222.jpg': second,
+  '/static/media/nike.c56217ad.jpg': second,
+  '/static/media/puma.11f0e77c.jpg': second,
+  '/static/media/reebok.0b75e334.jpg': second,
+  '/static/media/skechers.7bc200a4.jpg': second,
+  '/static/media/underarmor.3f9838f0.jpg': second,
 }
 
 function additionalImages(imageMain, imageList) {
